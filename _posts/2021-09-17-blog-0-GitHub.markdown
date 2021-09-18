@@ -72,4 +72,4 @@ $ git merge <branch name>
 {% endhighlight %}
 
 # **Visual explanation for Git commands:**
-![GitHub Commands](https://topramanc.github.io/images/git.png)
+![GitHub Commands](https://topramanc.github.io/Images/git.png)
