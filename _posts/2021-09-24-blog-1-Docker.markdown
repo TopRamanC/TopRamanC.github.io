@@ -24,7 +24,7 @@ CONTAINER ID   IMAGE          COMMAND       CREATED      STATUS         PORTS   
 861e02fa00ad   ubuntu:18.04   "/bin/bash"   2 days ago   Up 8 seconds   0.0.0.0:9090->9090/tcp, :::9090->9090/tcp   simple-prometheus
 {% endhighlight %}
 
-![Commands Image](https://topramanc.github.io/Images/docker ps.png)
+![Commands Image](https://topramanc.github.io/Images/docker/ps.png)
 
 
 
