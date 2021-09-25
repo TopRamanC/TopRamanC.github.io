@@ -1,75 +1,71 @@
 ---
 layout: post
-title:  "Blog 0 - Getting Started with GitHub"
-date:   2021-09-17 18:34:20 -0700
+title:  "Blog 1 - Docker"
+date:   2021-09-24 18:21:20 -0700
 categories: jekyll update
 ---
 
-# **What is GitHub?**
-#### GitHub is used for software development using verison control and Git for internet hosting. GitHub is essentialy a repository hosting database used for project collaborations by many companies and people around the world.
+# **What is Docker?**
+#### Docker is an application development tool that helps DevOps and developers as it allows you to use virtualization to build and run applications in containers. 
 
-# **Important commands for GitHub:**
-### **Git add**
-#### Git add is used to add files to the staging area before it can be commit to a repository.
-##### **Command in usage:**
+# **What is a Container?**
+#### A Container is a run-time environment where you can build and deploy software. Each container is independent and do not affect other running containers. Containers run at the app layer which allows them to virtualize the operating systemm to run isolated processes.
+
+# **What is a Docker Container Image?**
+####  Docker Container Image is a file that conatins instructions for deplying containers. Docker Image consists of all the files necesarry to deploy a functional environment such as source code, libraries, and dependencies. 
+
+# **Important commands for Docker:**
+### **docker ps**
+#### Usage: Displays a list of all running containers.
+##### **Example**
 {% highlight ruby %}
-$ git add <file or directory name>
+root@ubuntu:~# docker ps
+CONTAINER ID   IMAGE          COMMAND       CREATED      STATUS         PORTS                                       NAMES
+861e02fa00ad   ubuntu:18.04   "/bin/bash"   2 days ago   Up 8 seconds   0.0.0.0:9090->9090/tcp, :::9090->9090/tcp   simple-prometheus
 {% endhighlight %}
 
+![Commands Image](https://topramanc.github.io/Images/docker ps.png)
 
-### **Git Commit**
-#### Git Commit is used to commit the changes to your local repository before the changes can be pushed to your Git Repository. Each commit is associated with a "commit message" to help understand the changes made.
-##### **Command in usage:**
+
+
+### **docker ps -a**
+#### Usage: Displays all running and stopped containers.
+##### **Example**
 {% highlight ruby %}
-$ git commit -m "Commit message"
+
 {% endhighlight %}
 
-### **Git Push**
-#### Git Push is used to push your commits from your local respository into the Git repository.
-##### **Command in usage:**
+### **docker run**
+#### Usage: Create a container from an image.
+##### **Example**
 {% highlight ruby %}
-$ git push <>
+
 {% endhighlight %}
 
-### **Git Status**
-#### Git Status shows any files in the staging area that are not commited.
-##### **Command in usage:**
+### **docker exec**
+#### Usage: Access a running container.
+##### **Example**
 {% highlight ruby %}
-$ git status
-On branch dev
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
 
-  	index.html
 {% endhighlight %}
 
-### **Git Pull**
-#### Git Push is used to get the latest version of a respository from the Git repository into your local respository.
-##### **Command in usage:**
+### **docker stop**
+#### Usage: Stop a running container.
+##### **Example**
 {% highlight ruby %}
-$ git pull <respository>
+
 {% endhighlight %}
 
-### **Git Fetch**
-#### Git Fetch is used to download any commits or files from your Git repository into your local repository.
-##### **Command in usage:**
+### **docker rm**
+#### Usage: Remove a stopped container.
+##### **Example**
 {% highlight ruby %}
-$ git fetch <repository>
+
 {% endhighlight %}
 
-### **Git Checkout**
-#### Git Checkout is used to switch between branches.
-##### **Command in usage:**
+### **docker rmi**
+#### Usage: Remove an image.
+##### **Example**
 {% highlight ruby %}
-$ git checkout <branch name>
-{% endhighlight %}
 
-### **Git Merge**
-#### Git Merge is used to merge two branches together. In many situations you may have a "staging branch" where you make all your changes and later can be used to combine with your main branch.
-##### **Command in usage:**
-{% highlight ruby %}
-$ git merge <branch name>
 {% endhighlight %}
-
-# **Visual explanation for Git commands:**
-![Commands Image](https://topramanc.github.io/Images/git.png)
