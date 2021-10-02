@@ -12,10 +12,10 @@ categories: jekyll update
 #### Infrastructe as Code (IaC) is the process of provisioning and managing networking and computing infrastructure through code files rather than physical hardware configuration.
 
 # **Why should you use Ansible?**
-#### * Ansible can do multiple jobs sucsh as Configuration Management and Deployments.
-#### * Ansible is agentless, cloud native, and SSH based which allows the user to push changes from one source to multiple sites.
-#### * Ansible is extensible has it has a large community with many pre-built modules and you can build your own custom modules.
-#### * Ansuble is easy to setup and uses syntax based on YAML.
+ * Ansible can do multiple jobs sucsh as Configuration Management and Deployments.
+ * Ansible is agentless, cloud native, and SSH based which allows the user to push changes from one source to multiple sites.
+ * Ansible is extensible has it has a large community with many pre-built modules and you can build your own custom modules.
+ * Ansuble is easy to setup and uses syntax based on YAML.
 
 # **What is a Playbook?**
 #### A playbook is a list of tasks that can be automatically executed. Each playbook consists a list of tasks and these tasks are executed one at a time and in order againsts all the machines matched by the host patern.
