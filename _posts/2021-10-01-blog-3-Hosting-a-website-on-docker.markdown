@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog 3 - Hosting a website on Docker"
-date:   2021-10-08 18:0:20 -0700
+date:   2021-10-07 18:0:20 -0700
 categories: jekyll update
 ---
 
