@@ -55,4 +55,3 @@ COPY index.html . # Copy our html file into the working directory
 
 * You can visit the url http://localhost:8080/ on your browser.
   ![Commands Image](https://topramanc.github.io/Images/hello-world.png)
-
