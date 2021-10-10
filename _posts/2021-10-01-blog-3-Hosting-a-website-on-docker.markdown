@@ -6,27 +6,51 @@ categories: jekyll update
 ---
 
 # **What do you need to host a website on Docker?**
-* Docker installed.
+* Docker installed
 * A Dockerfile
 * Your html file
 
-# **What is a dockerfile?**
-#### A Dockerfile consists of commands and istructions that are used to built a docker image. Dockerfile helps automate the process of builidng an image by executing numerous commands at once.
+# **What is a Dockerfile?**
+#### A Dockerfile consists of commands and instructions that are used to build a docker image. Dockerfile helps automate the process of building an image by executing multiple commands.
 
-# **What should your Dockerfile contain?**
-* Your Dockerfile must contain the Apache httpd server along with your html file to be hosted.
+# **What should your Dockerfile contain to host a web server?**
+#### Your Dockerfile must contain the Apache httpd server along with your html file to be hosted.
 
-# **Below is a Dockerfile to host an static webpage on a apache server:**
+# **Below is a walkthrough of how to host and test a static website on a apache server in Docker: **
+
+# **Dockerfile to build our image:**
 {% highlight ruby %}
-FROM httpd
+FROM httpd  # This line obtains an image for the Apache web server
 
-WORKDIR /usr/local/apache2/htdocs
+WORKDIR /usr/local/apache2/htdocs # Set the correct working directory
 
-COPY index.html .
+COPY index.html . # Copy our html file into the working directory
 {% endhighlight %}
 
 # **Docker commands needed to host your website:**
-* Docker build -t <name of the tag of the image being built> .
-* Docker run -dit --name my_website -p 8080:80 my_image
+## **The command below will create a custom image from our Docker file and tag it "my_iamge":
+{% highlight ruby %}
+ Docker build -t my_iamge .
+{% endhighlight %}
 
-#### 
+## **The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:
+## Docker run -dit --name my_website -p 8080:8080 my_image
+
+# **Congrats!! Now you have succesfully deployed your website but how can you check validate if everything is running correctly?**
+## **There are two ways to make sure our webpage is running correctly:**
+* You can curl http://localhost:8080/ on your machine.
+{% highlight ruby %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p>This is an example of a simple HTML page with one paragraph.</p>
+    </body>
+</html>
+{% endhighlight %}
+
+* You can visit the url http://localhost:8080/ on your browser.
+  ![Commands Image](https://topramanc.github.io/Images/hello-world.png)
+
