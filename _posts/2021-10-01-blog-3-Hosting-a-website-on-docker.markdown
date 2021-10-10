@@ -16,7 +16,7 @@ categories: jekyll update
 # **What should your Dockerfile contain to host a web server?**
 #### Your Dockerfile must contain the Apache httpd server along with your html file to be hosted.
 
-# **Below is a walkthrough of how to host and test a static website on a apache server in Docker: **
+# **Below is a walkthrough of how to host and test your website:**
 
 # **Dockerfile to build our image:**
 {% highlight ruby %}
@@ -28,16 +28,16 @@ COPY index.html . # Copy our html file into the working directory
 {% endhighlight %}
 
 # **Docker commands needed to host your website:**
-## **The command below will create a custom image from our Docker file and tag it "my_iamge":
+### **The command below will create a custom image from our Docker file and tag it "my_image":**
 {% highlight ruby %}
  Docker build -t my_iamge .
 {% endhighlight %}
 
-## **The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:
+### **The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:**
 ## Docker run -dit --name my_website -p 8080:8080 my_image
 
 # **Congrats!! Now you have succesfully deployed your website but how can you check validate if everything is running correctly?**
-## **There are two ways to make sure our webpage is running correctly:**
+### **There are two ways to make sure our webpage is running correctly:**
 * You can curl http://localhost:8080/ on your machine.
 {% highlight ruby %}
 <!DOCTYPE html>
