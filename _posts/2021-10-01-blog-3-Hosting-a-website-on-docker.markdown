@@ -33,13 +33,13 @@ COPY index.html . # Copy our html file into the working directory
  Docker build -t my_iamge .
 {% endhighlight %}
 
-### **The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:**
+#### The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:
 {% highlight ruby %}
  Docker run -dit --name my_website -p 8080:8080 my_image
 {% endhighlight %}
 
 # **Congrats!! Now you have succesfully deployed your website but how can you check validate if everything is running correctly?**
-### **There are two ways to make sure our webpage is running correctly:**
+#### There are two ways to make sure our webpage is running correctly:
 * You can curl http://localhost:8080/ on your machine.
 {% highlight ruby %}
 <!DOCTYPE html>
