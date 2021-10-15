@@ -28,7 +28,7 @@ COPY index.html . # Copy our html file into the working directory
 {% endhighlight %}
 
 # **Docker commands needed to host your website:**
-### **The command below will create a custom image from our Docker file and tag it "my_image":**
+#### The command below will create a custom image from our Docker file and tag it "my_image":
 {% highlight ruby %}
  Docker build -t my_iamge .
 {% endhighlight %}
