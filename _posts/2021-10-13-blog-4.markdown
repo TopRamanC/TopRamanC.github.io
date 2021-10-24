@@ -16,37 +16,8 @@ sudo apt install apache2
 #### You can go to http://server-ip:80 in your web browser and it should display the output below:
 ![Commands Image](https://topramanc.github.io/Images/apache.png)
 
-# **What is a Dockerfile?**
-#### A Dockerfile consists of commands and instructions that are used to build a docker image. Dockerfile helps automate the process of building an image by executing multiple commands.
-
-# **What should your Dockerfile contain to host a web server?**
-#### Your Dockerfile must contain the Apache httpd server along with your html file to be hosted.
-
-# **Below is a walkthrough of how to host and test your website:**
-
-# **First we need to create our Dockerfile:**
-{% highlight ruby %}
-FROM httpd  # This line obtains an image for the Apache web server
-
-WORKDIR /usr/local/apache2/htdocs # Set the correct working directory
-
-COPY index.html . # Copy our html file into the working directory
-{% endhighlight %}
-
-# **Docker commands needed to host your website:**
-#### The command below will create a custom image from our Docker file and tag it "my_image":
-{% highlight ruby %}
- Docker build -t my_iamge .
-{% endhighlight %}
-
-#### The command below will run a container from the custom image we created in the last step and connects port 8080 with the local machine port 8080:
-{% highlight ruby %}
- Docker run -dit --name my_website -p 8080:8080 my_image
-{% endhighlight %}
-
-# **Congrats!! Now you have succesfully deployed your website but how can you check validate if everything is running correctly?**
-#### There are two ways to make sure our webpage is running correctly:
-* You can curl http://localhost:8080/ on your machine.
+# **Now that you have your server ready you need to create a html file to host on your server**
+#### We will be using the simple index.html for this blog:
 {% highlight ruby %}
 <!DOCTYPE html>
 <html>
@@ -59,5 +30,19 @@ COPY index.html . # Copy our html file into the working directory
 </html>
 {% endhighlight %}
 
-* You can visit the url http://localhost:8080/ on your browser.
-  ![Commands Image](https://topramanc.github.io/Images/hello-world.png)
+#### We will be saving index.html in a directory called docs
+
+# **Once you have your html file ready you need to move your directory conatining your index.html to /var/www/html**
+#### Below is the command used to move your directory:
+{% highlight ruby %}
+sudo mv docs/ /var/www/html
+{% endhighlight %}
+
+# **Now that we have our file in the right place now we can go ahead and start the apache server**
+#### Below is the command to start an apache server:
+{% highlight ruby %}
+sudo service apache start
+{% endhighlight %}
+
+# **Now your website is running!!**
+# To access your website we need to visit https://127.0.0.1/docs/
