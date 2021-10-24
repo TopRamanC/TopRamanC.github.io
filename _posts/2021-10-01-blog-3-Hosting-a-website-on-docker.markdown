@@ -45,11 +45,8 @@ COPY index.html . # Copy our html file into the working directory
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        <title>Hello World!</title>
     </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
 </html>
 {% endhighlight %}
 

@@ -22,11 +22,8 @@ sudo apt install apache2
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Example</title>
+        <title>Hello World!</title>
     </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
 </html>
 {% endhighlight %}
 
@@ -46,3 +43,5 @@ sudo service apache start
 
 # **Now your website is running!!**
 # To access your website we need to visit https://127.0.0.1/docs/
+## Output:
+![Commands Image](https://topramanc.github.io/Images/hello-world.png)
