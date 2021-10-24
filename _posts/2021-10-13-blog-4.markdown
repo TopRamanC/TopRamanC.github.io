@@ -12,7 +12,7 @@ sudo apt update
 sudo apt install apache2
 {% endhighlight %}
 
-# **How do I know my apache server is installed correctly and working?**
+# **How do you know my apache server is installed correctly and working?**
 #### You can go to http://server-ip:80 in your web browser and it should display the output below:
 ![Commands Image](https://topramanc.github.io/Images/apache.png)
 
