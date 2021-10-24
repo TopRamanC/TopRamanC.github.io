@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog 5 - Terraform"
-date:   2021-10-13 17:0:20 -0700
+date:   2021-10-20 17:0:20 -0700
 categories: jekyll update
 ---
 
@@ -26,3 +26,28 @@ categories: jekyll update
 
 ### **terraform import**
 #### Usage: Used to import existing resources into Terraform.
+
+### **Below is an example of Terraform being used to build an AWS instance**
+{% hihglight %}
+configuration file:
+provider "aws" {
+ 
+  region   = "eu-west-2"
+  shared_credentials_file = "c:/Users/admin/.aws/credentials"
+  profile = "Testing123"
+ 
+}
+ 
+resource "aws_instance" "example" {
+ 
+  ami         = "ami-0c09927662c939f41"
+  instance_type = "t2.micro"
+ 
+  tags {
+ 
+  name = "Testing"
+ 
+  }
+ 
+}
+{% endhighlight %}
