@@ -28,7 +28,7 @@ categories: jekyll update
 #### Usage: Used to import existing resources into Terraform.
 
 ### **Below is an example of Terraform being used to build an AWS instance**
-{% highlight %}
+{% highlight ruby %}
 configuration file:
 provider "aws" {
  
