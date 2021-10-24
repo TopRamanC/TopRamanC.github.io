@@ -1,14 +1,20 @@
 ---
 layout: post
-title:  "Blog 4 - Hosting a website on Docker"
+title:  "Blog 4 - Hosting a website on Apache in Ubuntu"
 date:   2021-10-13 17:0:20 -0700
 categories: jekyll update
 ---
 
-# **What do you need to host a website on Docker?**
-* Docker installed
-* A Dockerfile
-* Your html file
+# **First we need to install Apache?**
+#### Below are the commands needed to install apache
+{% highlight ruby %}
+sudo apt update
+sudo apt install apache2
+{% endhighlight %}
+
+# **How do I know my apache server is installed correctly and working?**
+#### You can go to http://server-ip:80 in your web browser and it should display the output below:
+![Commands Image](https://topramanc.github.io/Images/apache.png)
 
 # **What is a Dockerfile?**
 #### A Dockerfile consists of commands and instructions that are used to build a docker image. Dockerfile helps automate the process of building an image by executing multiple commands.
