@@ -9,8 +9,8 @@ categories: jekyll update
 #### Virtual hosts are used to run more than one domain on a single IP address. It allows you to have multiple websites running on a single server.
 
 # **There are two types of Virtual Hosts:**
-#### IP based Virtual Hosts - your apache server will run two or more IP addresses.
-#### Domain based Virtual Hosts - your spache server will have one IP address but with multiple domains.
+* IP based Virtual Hosts - your apache server will run two or more IP addresses.
+* Domain based Virtual Hosts - your spache server will have one IP address but with multiple domains.
 
 # **How do I make Virtual Hosts:**
 #### Step 1: Create a new Virtual Host File in sites-available directory.
@@ -19,7 +19,7 @@ sudo vi /etc/apache2/sites-available/virtualhost.conf
 {% endhighlight %}
 
 #### Step 2: Add your Virtual Host block to your file.
-#### The two Virtual Host block below are domain based Virtual Hosts where you can access your website using both of the domains listed below in the Virtual Host blocks:
+#### The two Virtual Host block below are domain based Virtual Hosts where you can access your website using both of the domains listed below in each block:
 {% highlight ruby %}
 <VirtualHost *:8080 *:80>
 
@@ -75,3 +75,7 @@ sudo a2ensite virtualhost.conf
 {% highlight ruby %}
 sudo service apache2 restart
 {% endhighlight %}
+
+# **You can test your Virtual Hosts by visiting each domain:**
+![Commands Image](https://topramanc.github.io/Images/Picture2.jpg)
+![Commands Image](https://topramanc.github.io/Images/Picture3.jpg)
