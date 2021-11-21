@@ -24,7 +24,6 @@ categories: jekyll update
 * "<h1>" - used for headings.
 * "<h2>" - used for subheadings.
 * "<h3>" - used for smaller subheadings.
-* "<title>" - used for the title of the webpage.
 * "<head>" - used to contain all information related to the webpage.
 * "<body>" - used to define the body of the webpage.
 * "<html>"- used to indicate the starting and ending of the html page.
