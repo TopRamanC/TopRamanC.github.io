@@ -1,7 +1,73 @@
 ---
 layout: post
-title:  "Blog 7 - Making a login page with html"
+title:  "Blog 7 - HTML for beginners"
 date:   2021-10-29 15:0:37 -0700
 categories: jekyll update
 ---
 
+# **What is HTML?**
+#### HTML stands for HyperText Markup Language used to display and design web pages on a broswer. HTML is usually paired with CSS and JavaScript for interactive pages.
+
+# What are HTML tags?
+### HTML tags are used to mark the beginning and ending of an element such the tag <title> would be used to define the title of the page.
+
+# What are HTML attributes?
+#### HTML attributes are information in between the HTML tags that specify further information about an element or section.
+
+# What is a CSS file and how does it connect with an HTML file?
+#### CSS files are used to style a HTML page as they are used to describe how the HTML code will be displayed on your screen.
+
+# So far we have talked about the structure and styling of a webpage but how does all the web interactions work?
+#### JavaScript is used for interactive webpages as it allows you to dynamically update content on a webpage. JavaScript can be used with HTML file as well as CSS files.
+
+# What are the different types of tags used in HTML?
+* <h1> - used for headings
+* <h2> - used for subheadings
+* <h3> - used for smaller subheadings
+* <title> - used for the title of a webpage
+* <head> - used to contain all information related to the webpage.
+* <body> - used to define the body of the webpage.
+* <html>- used to indicate the starting and ending of the html page.
+
+# Example html:
+{% highlight ruby %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Welcome to my html page</title>
+    <h1>My name is Raman Chadha.</h1>
+</head>
+
+<body>
+    <h1>This is where the body goes.</h1>
+</body>
+</html>
+{% endhighlight %}
+
+# Example CSS:
+{% highlight ruby %}
+.color{
+    color: red;
+}
+
+body{
+    background-color: pink;
+}
+{% endhighlight %}
+
+# Example JavaScript:
+{% highlight ruby %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Below is a submit button made by javascript</h1>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "submit button!"'>Submit!</button>
+
+</body>
+</html>
+{% endhighlight %}
+
+# Overview:
+#### HTML is used to take care of the structure of the webpage, CSS handles the styling and appearance of the webpage, and JavaScript is used to determine the behavior of the webpage. All three of these are used together to make big and interactive pages. 
