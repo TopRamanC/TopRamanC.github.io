@@ -21,10 +21,10 @@ categories: jekyll update
 #### JavaScript is used for interactive webpages as it allows you to dynamically update content on a webpage. JavaScript can be used with HTML file as well as CSS files.
 
 # **What are the different types of tags used in HTML?**
-* "<h1>" - used for headings
-* "<h2>" - used for subheadings
-* "<h3>" - used for smaller subheadings
-* "<title>" - used for the title of a webpage
+* "<h1>" - used for headings.
+* "<h2>" - used for subheadings.
+* "<h3>" - used for smaller subheadings.
+* "<title>" - used for the title of the webpage.
 * "<head>" - used to contain all information related to the webpage.
 * "<body>" - used to define the body of the webpage.
 * "<html>"- used to indicate the starting and ending of the html page.
