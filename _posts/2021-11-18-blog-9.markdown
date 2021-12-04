@@ -17,7 +17,7 @@ a2enmod ssl
 openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
 {% endhighlight %}
 
-#### Below is the break down of the command above:
+#### **Below is the break down of the command above:**
 * openssl: command to use openssl to make any certificates or keys.
 * req: command used to request a certificate or key.
 * x509: this number defines that it will be a self signed certificate.
@@ -58,4 +58,4 @@ openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certifi
 
 # **Now you have succesfully setup your SSL!!!**
 ### When you visit your website the following warning will display because it is a self signed certificate:
-![Commands Image](https://topramanc.github.io/Images/ssl.jpg)
+![Commands Image](https://topramanc.github.io/Images/ssl.png)
