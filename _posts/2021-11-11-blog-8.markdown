@@ -90,4 +90,4 @@ categories: jekyll update
 {% endhighlight %}
 
 # **Below is the Output from the code above:**
-![Commands Image](https://topramanc.github.io/Images/login.jpeg)
+![Commands Image](https://topramanc.github.io/Images/login.jpg)
