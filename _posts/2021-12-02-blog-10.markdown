@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Blog 10 - Protecting a website with a password using .htaccess"
+date:   2021-12-02 14:0:37 -0700
+categories: jekyll update
+---
+
+# **What is a .htaccess file?**
+#### .htaccess is a configuration file that is used by apache web servers.
+
+# **What can the .htaccess file be used for?**
+* Used for redirection of URLs.
+* Protecting a site with a password.
+* Make custom error pages.
+* Set specific server configurations for a specific directory.
+
+# **How to create a .htaccess file to protect a website?**
+#### Your .htaccess files must include the following elements:
+* AuthType: The type of authentication.
+* AuthName: Name for the authentication.
+* AuthUserfile: The path for the password file.
+* Require: Used to require certain conditions such as a specific user.
+
+# **Where should you store your password file?**
+#### You should never store your password file in the same directory as the .htaccess for security reasons.
+
+# **Where should you store the .htaccess file?**
+#### The .htaccess file must be stored in the directory that you wish to protect with a password.
+
+# **Below is an example of a .htaccess file:**
+{% highlight ruby %}
+AuthType Basic
+AuthName "Restricted index.html file"
+AuthUserFile "/home/raman/public_html/Dev/.htpasswd"
+Require user raman
+{% endhighlight %}
+
+# **There are security concerns with .htaccess files:**
+#### You must never allow .htaccess files on your server if not necessary as these files can be used to modify configurations of a server and can easily be used by an hacker to enter and deploy a malicious script onto your server.
+
+# **Below is the picture displaying what you will see when you visit the protected website:**
+![Commands Image](https://topramanc.github.io/Images/picture2.png)
+
+# **You will be able to access the website after you enter the correct credentials:**
+![Commands Image](https://topramanc.github.io/Images/picture4.png)
