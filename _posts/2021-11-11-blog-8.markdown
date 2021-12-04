@@ -9,7 +9,7 @@ categories: jekyll update
 * HTML Form
 * Input
 
-# **What is HTML Form?**
+# **What is a HTML Form?**
 #### HTML Form is an element used to create a form where users can enter input.
 
 # **What is the Input element?**
@@ -41,7 +41,9 @@ categories: jekyll update
 <input type="week">
 {% endhighlight %}
 
-# **To create a login page we must set the input type to "text" to receive text input from the user and "submit" to submit the credentials**
+# **Below is a block of code making a simple log in page**
+* To create a login page we must set the input type to "text" to receive text input from the user and "submit" to submit the credentials.
+* We must also set the form action to the html page we want to display.
 {% highlight ruby %}
 
     <form id="Signin" action="login.html" method="GET">
