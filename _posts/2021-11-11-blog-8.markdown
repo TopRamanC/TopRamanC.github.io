@@ -1,6 +1,93 @@
 ---
 layout: post
-title:  "Blog 8"
+title:  "Blog 8 - Making a login page with html"
 date:   2021-11-11 13:0:37 -0700
 categories: jekyll update
 ---
+
+# **To create a login page you must know the following HTML elements:**
+* HTML Form
+* Input
+
+# **What is HTML Form?**
+#### HTML Form is an element used to create a form where users can enter input.
+
+# **What is the Input element?**
+#### The Input element is an type of form element that is used to define the input type of your form.
+
+# **There are many types of Input types:**
+{% highlight ruby %}
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text"> 
+<input type="time">
+<input type="url">
+<input type="week">
+{% endhighlight %}
+
+# **To create a login page we must set the input type to "text" to receive text input from the user and "submit" to submit the credentials**
+{% highlight ruby %}
+
+    <form id="Signin" action="login.html" method="GET">
+        <input type="text" name ="Username" placeholder="Username">
+        <input type="text" name ="Password" placeholder="Password">            
+        <input type="submit" value="Sign in" id="signinbutton">
+    </form>
+{% endhighlight %}
+
+
+# **Below is an example of a login page:**
+
+{% highlight ruby %}
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in</title>
+        <link rel="stylesheet" href="login.css" />
+            <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    <body id="photo">
+        
+        <h1 id="title">KWARM</h1>
+        
+        <form id="Signin" action="login.html" method="GET">
+            <input type="text" name ="Username" placeholder="Username">
+            <input type="text" name ="Password" placeholder="Password">            
+            <input type="submit" value="Sign in" id="signinbutton">
+        </form>
+
+        <form id="Signup">
+            <input type="submit" value="Sign up" id="signupbutton">
+        </form>
+
+        <h1 id="or">----or----</h1>
+        
+    </body>
+</html>
+{% endhighlight %}
+
+# **Below is the Output from the code above:**
+![Commands Image](https://topramanc.github.io/Images/login.jpeg)
