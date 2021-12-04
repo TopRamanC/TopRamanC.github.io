@@ -39,7 +39,7 @@ Require user raman
 #### You must never allow .htaccess files on your server if not necessary as these files can be used to modify configurations of a server and can easily be used by an hacker to enter and deploy a malicious script onto your server.
 
 # **Below is the picture displaying what you will see when you visit the protected website:**
-![Commands Image](https://topramanc.github.io/Images/Picture2.jpg)
+![Commands Image](https://topramanc.github.io/Images/Picture1.jpg)
 
 # **You will be able to access the website after you enter the correct credentials:**
 ![Commands Image](https://topramanc.github.io/Images/Picture4.jpg)
