@@ -1,6 +1,61 @@
 ---
 layout: post
-title:  "Blog 9"
+title:  "Blog 9 - Creating a self signed SSL Certificate"
 date:   2021-11-18 15:0:37 -0700
 categories: jekyll update
 ---
+
+# **Before creating a certificate you must enable the SSL module in apache**
+### You must run the following command to enable the SSL module:
+{% highlight ruby %}
+a2enmod ssl
+{% endhighlight %}
+
+# **Below are the steps to create the SSL Certificate**
+#### Step 1: Create the Certificate and the Key by the following command:
+{% highlight ruby %}
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+{% endhighlight %}
+
+#### Below is the break down of the command above:
+* openssl: command to use openssl to make any certificates or keys.
+* req: command used to request a certificate or key.
+* x509: this number defines that it will be a self signed certificate.
+* nodes: command used to skip the passphrase.
+* days 365: makes the certificated valid for 365 days
+* newkey rsa:2048: Makes a RSA key thats 2048 bits long.
+* keyout: used to name the key file.
+* -out: used to name the certificate file.
+
+# **After you run the command you will be asked to answer the following question:**
+* Country Name (2 letter code) [AU]:
+* State or Province Name (full name) [Some-State]:
+* Locality Name (eg, city) []:
+* Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+* Organizational Unit Name (eg, section) []:
+* Common Name (e.g. server FQDN or YOUR name) []:
+* Email Address []:
+
+# **After you have moved both files in the desired location you must modify your config file**
+#### You must turn on SSLEngine and define the correct file paths to the certification and key files.
+#### Below is an example of a config file with SSL:
+{% highlight ruby %}
+<VirtualHost *:443>
+
+    ServerName https://site1.internal
+
+    DocumentRoot /var/www/html/
+
+    SSLEngine on
+    SSLCertificateFile "/etc//ssl/certs/certificate.pem"
+    SSLCertificateKeyFile "/etc//ssl/key.pem"
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+{% endhighlight %}
+
+# **Now you have succesfully setup your SSL!!!**
+### When you visit your website the following warning will display because it is a self signed certificate:
+![Commands Image](https://topramanc.github.io/Images/ssl.jpg)
