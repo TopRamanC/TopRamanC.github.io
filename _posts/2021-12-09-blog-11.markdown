@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "Blog 11 - Proxy Servers in Apache"
+date:   2021-12-09 12:0:37 -0700
+categories: jekyll update
+---
+
+# **What is a proxy server?**
+#### A proxy server is used to take a request and directs the client to the appropriate backend server.
+
+# **What is a reverse proxy?**
+#### A reverse proxy is a gateway between the client and the backend server.
+
+# **Why should we use proxy instead of redirection?**
+#### Proxy servers are used to hide the behind the scene actions from the client. The client will not be able to see the actions that are being performed by the proxy servers in the backend.
+
+# **Which modules should I have enabled to use proxy servers?**
+#### Below are the most common modules associated with proxy servers: (all of these are not required for a simple proxy server)
+* proxy
+* proxy_http
+* proxy_ajp
+* headers
+* proxy_balancer
+* proxy_html
+
+# **Below are the commands to enable the appropriate modules:**
+* proxy: a2enmod proxy
+* proxy_http: a2enmod proxy_http
+* proxy_ajp: a2enmod proxy_ajp
+* headers: a2enmod headers
+* proxy_balancer: a2enmod proxy_balancer
+* proxy_html: a2enmod proxy_html
+
+# **How should I configure my vHost file?**
+* You must turn the proxy engine on or the ssl proxy engine on
+* You must also have the appropriate proxy directives
+
+# **Below is an example of what a vHost file would look like:**
+
+{% highlight ruby %}
+<VirtualHost *:443>
+
+    ServerName site1.internal
+
+    SSLProxyEngine on
+
+    SSLEngine on
+    SSLCertificateFile "/etc/ssl/certs/certificate.pem"
+    SSLCertificateKeyFile "/etc/ssl/key.pem"
+
+    ProxyPass "/special/" http://site3.internal:8443
+    ProxyPass "/special" http://site3.internal:8443
+    ProxyPassReverse "/special/" http://site3.internal:8443
+    ProxyPassReverse "/special" http://site3.internal:8443
+
+    ProxyPass "/images" !
+    ProxyPass "/" http://site2.internal:8443
+    ProxyPassReverse "/" http://site2.internal:8443
+</VirtualHost>
+{% endhighlight %}
