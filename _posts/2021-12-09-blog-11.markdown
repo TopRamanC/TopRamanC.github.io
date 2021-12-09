@@ -14,6 +14,9 @@ categories: jekyll update
 # **Why should we use proxy instead of redirection?**
 #### Proxy servers are used to hide the behind the scene actions from the client. The client will not be able to see the actions that are being performed by the proxy servers in the backend.
 
+# **Where does proxy stand in the hierarchy of actions in a server?**
+#### The hierarchy is defined as Proxy -> Rewrite -> Alias. This means that all the proxy rules will be executed first before any Rewerite or Alias rules. You must configure your web server accordingly to this hierarchy.
+
 # **Which modules should I have enabled to use proxy servers?**
 #### Below are the most common modules associated with proxy servers: (all of these are not required for a simple proxy server)
 * proxy
