@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Blog 0 - How to create a EC2 Instance"
+date:   2022-02-12 04:24:37 -0700
+categories: jekyll update
+---
+
+# **What is a EC2 Instance?**
+#### EC2 stands for Elastic Compute Cloud which is a web service provided by Amazon AWS. An EC2 Instance is a on-demand service by AWS in which you can use a instance based on your memmory and CPU requirment needed and then you will pay for how long you use that service for.
+
+# **Step 1:**
+#### Log in to your AWS account or create an account if you don't have one.
+
+# **Step 2:**
+#### Go to EC2 Dashboard and Click on "Launch Instance":
+![Commands Image](https://topramanc.github.io/Images/1.png)
+
+# **Step 3:**
+#### Select your desired AMI:
+![Commands Image](https://topramanc.github.io/Images/2.png)
+
+# **Step 4:**
+#### Select your Instance Type and click on "next":
+![Commands Image](https://topramanc.github.io/Images/3.png)
+
+# **Step 5:**
+#### On this page you can configure your instance details and then click "next":
+![Commands Image](https://topramanc.github.io/Images/4.png)
+
+# **Step 6:**
+#### Select your storage and storage type you wish to add:
+![Commands Image](https://topramanc.github.io/Images/5.png)
+
+# **Step 7:**
+#### Add any tags:
+![Commands Image](https://topramanc.github.io/Images/6.png)
+
+# **Step 8:**
+#### Configure your security groups and click "Review and Launch" (you should only give access to yourself):
+![Commands Image](https://topramanc.github.io/Images/7.png)
+
+# **Step 9:**
+#### Review all your selected options and click on "Launch":
+![Commands Image](https://topramanc.github.io/Images/8.png)
+
+# **Step 10:**
+#### Select an existing key pair or create a new key pair:
+![Commands Image](https://topramanc.github.io/Images/9.png)
+
+# **Congrats!! Now you have successfully created your instance:
+![Commands Image](https://topramanc.github.io/Images/10.png)
+
+# **Connect to your EC2 Instance by clicking on the instance name and then clicking on "connect":
+![Commands Image](https://topramanc.github.io/Images/11.png)
+
+# **Now you are connected to your instance!!**
+![Commands Image](https://topramanc.github.io/Images/12.png)
