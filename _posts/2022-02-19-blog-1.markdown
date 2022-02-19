@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Blog 5 - Automation"
-date:   2021-10-20 17:0:20 -0700
+title:  "Blog 1 - Terraform"
+date:   2022-02-19 14:0:20 -0700
 categories: jekyll update
 ---
 
