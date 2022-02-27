@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Blog 2 - Terraform"
+title:  "Blog 2"
 date:   2022-02-26 13:0:20 -0700
 categories: jekyll update
 ---
