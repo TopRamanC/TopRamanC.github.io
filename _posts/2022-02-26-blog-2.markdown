@@ -1,6 +1,93 @@
 ---
 layout: post
-title:  "Blog 2"
+title:  "Blog 2 - Terraform Modules"
 date:   2022-02-26 13:0:20 -0700
 categories: jekyll update
 ---
+
+# **What is a Terraform Module**?
+#### A Terraform Module is a set of Terraform configurations in a directory.
+
+# **Why should you use Terraform Modules**?
+#### The main advantage of using Terrform Modules is its reusability as it allows you to group resources together and then can be used as many times you like.
+
+# **Today we will construct a module together:**
+### We will be constructing a module that will deploy infrastructure in us-wes-2 region
+
+# Step 1: We need to define our cloud providor and which region we will be using:
+{% highlight ruby %}
+  providor "aws" {
+    region="us-west-2"
+}
+{% endhighlight %}
+
+# Step 2: We need to define our resource type:
+{% highlight ruby %}
+resource "aws_instance" "example" {
+ 
+  ami         = "ami-0c09927662c939f41"
+  instance_type = "t2.micro"
+ 
+  tags {
+ 
+  name = "Testing"
+ 
+  }
+ 
+}
+{% endhighlight %}
+
+# Step 3: We will define our security groups for our resource:
+{% highlight ruby %}
+resource "aws_security_group" "securityrule" {
+    name = "allow-ssh"
+    description = "Allow ssh traffic"
+    vpc_id = "vpc-07142bf09e3b0cf4b"
+
+    ingress {
+        description = "Allow inbound ssh traffic"
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+        cidr_blocks = "[0.0.0.0/0]"
+    }
+{% endhighlight %}
+#### Now our main configuration file (module) is done!
+
+# Below is what our final version of the file will look like:
+{% highlight ruby %}
+  providor "aws" {
+    region="us-west-2"
+}
+
+resource "aws_instance" "example" {
+ 
+  ami         = "ami-0c09927662c939f41"
+  instance_type = "t2.micro"
+ 
+  tags {
+ 
+  name = "Testing"
+ 
+  }
+ 
+}
+
+resource "aws_security_group" "securityrule" {
+    name = "allow-ssh"
+    description = "Allow ssh traffic"
+    vpc_id = "vpc-07142bf09e3b0cf4b"
+
+    ingress {
+        description = "Allow inbound ssh traffic"
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+        cidr_blocks = "[0.0.0.0/0]"
+    }
+{% endhighlight %}
+
+# **Instructions to run this nodule:**
+#### Command 1: terraform init = this will download the code for aws that we will use.
+#### Command 2: terraform plan = this will tell you the action terraform will preform before it makes any changes.
+#### Command 3: terraform apply = this will apply the changes and run the configuration file.
