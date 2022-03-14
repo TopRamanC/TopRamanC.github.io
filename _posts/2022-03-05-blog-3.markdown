@@ -1,7 +1,70 @@
 ---
 layout: post
-title:  "Blog 3"
+title:  "Blog 3 - HTML Forms"
 date:   2022-03-05 15:0:20 -0700
 categories: jekyll update
 ---
 
+# **What are HTML forms used for?**
+#### HTML form tags are used for collecting user input and the <form> tag is used to create a form.
+
+# **The form tag can use the follwoing elements:**
+* <input> = used to define an input.
+* <button> = used to create a clickable button.
+* <select> = used to define a drop down list.
+* <option> = used to define an option in a drop down list.
+* <fieldset> = used to group related data in a form.
+* <label> = used to define labels for form elements.
+* <output> = used to display a result of a calculation.
+* <textarea> = used to define multi-line text area.
+* <datalist> = used to define a pre-defined opitons for user input.
+
+# Simple Example: This html code generates a button that will say "Click Me!"
+{% highlight ruby %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Click the button below</h2>
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+</body>
+</html>
+{% endhighlight %}
+
+# Output from the code above:
+![Commands Image](https://topramanc.github.io/Images/Button.png)
+
+# Now that you know what a HTML Form can be used for let me show you an HTML code that I am using in my group project and it uses a lot of form tags to collect user input:
+#### Below is a code snippet from my group project that uses the form tags and elements to collect user input for creating an account:
+{% highlight ruby %}
+        <form method="POST" action="form1.php" id="signup" class="form form-hidden">
+             <h1 class="form-title">Sign Up</h1>
+             <div class="form-message form-message-error"></div>
+             <div class="form-input-group">
+                 <input type="text" id="signupusername" name="username" class="form-input"  placeholder="Username">
+                 <div class="form-input-errormessage"></div>
+             </div>
+             <div class="form-input-group">
+                 <input type="text" class="form-input"  name="email" placeholder="Email Address">
+                 <div class="form-input-errormessage"></div>
+             </div>
+             <div class="form-input-group">
+              <input type="password" class="form-input" name="pwd" placeholder="password">
+              <div class="form-input-errormessage"></div>
+             </div>
+             <div class="form-input-group">
+                 <input type="password" class="form-input"  placeholder="Confirm Password">
+                 <div class="form-input-errormessage"></div>
+                </div>
+          <button class="form-button" name="submit" type="submit">Continue</button>
+         
+          <p class="form-text">
+              <a class="form-link" id="linklogin">Already have an account? Sign in</a>
+          </p>
+         </form> 
+{% endhighlight %}
+
+# Below is what the output looks like in a browser:
+![Commands Image](https://topramanc.github.io/Images/signuppage.png)
