@@ -9,17 +9,19 @@ categories: jekyll update
 #### HTML form tags are used for collecting user input and the <form> tag is used to create a form.
 
 # **The form tag can use the follwoing elements:**
-* "<input>" = used to define an input.
-* "<button>" = used to create a clickable button.
-* "<select>" = used to define a drop down list.
-* "<option>" = used to define an option in a drop down list.
-* "<fieldset>" = used to group related data in a form.
-* "<label>" = used to define labels for form elements.
-* "<output>" = used to display a result of a calculation.
-* "<textarea>" = used to define multi-line text area.
-* "<datalist>" = used to define a pre-defined opitons for user input.
+{% highlight ruby %}
+* <input> = used to define an input.
+* <button> = used to create a clickable button.
+* <select> = used to define a drop down list.
+* <option> = used to define an option in a drop down list.
+* <fieldset> = used to group related data in a form.
+* <label> = used to define labels for form elements.
+* <output> = used to display a result of a calculation.
+* <textarea> = used to define multi-line text area.
+* <datalist> = used to define a pre-defined opitons for user input.
+{% endhighlight %}
 
-# Simple Example: This html code generates a button that will say "Click Me!"
+# **Simple Example: This html code generates a button that will say "Click Me!"**
 {% highlight ruby %}
 <!DOCTYPE html>
 <html>
