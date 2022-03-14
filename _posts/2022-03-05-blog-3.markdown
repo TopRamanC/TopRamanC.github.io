@@ -35,7 +35,7 @@ categories: jekyll update
 </html>
 {% endhighlight %}
 
-# Output from the code above:
+# **Output from the code above:**
 ![Commands Image](https://topramanc.github.io/Images/Button.png)
 
 # **Now that you know what a HTML Form can be used for let me show you an HTML code that I am using in my group project and it uses a lot of form tags to collect user input:**
@@ -68,5 +68,5 @@ categories: jekyll update
          </form> 
 {% endhighlight %}
 
-# Below is what the output looks like in a browser:
+# **Below is what the output looks like in a browser:**
 ![Commands Image](https://topramanc.github.io/Images/signuppage.png)
