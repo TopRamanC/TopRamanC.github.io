@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Blog 2 - Ansible"
+title:  "Blog 2 - Automation with Docker"
 date:   2021-10-01 18:43:20 -0700
 categories: jekyll update
 ---
