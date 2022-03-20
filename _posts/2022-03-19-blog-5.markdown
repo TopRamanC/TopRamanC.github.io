@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Blog 5 - Ansible Playbook"
+date:   2022-03-12 14:0:20 -0700
+categories: jekyll update
+---
+
+# **What is a Ansible Playbook?**
+#### A playbook is a list of tasks that can be automatically executed. Each playbook consists a list of tasks and these tasks are executed one at a time and in order againsts all the machines matched by the host patern.
+
+# **W
