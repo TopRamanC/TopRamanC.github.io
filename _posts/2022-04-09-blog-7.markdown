@@ -1,7 +1,76 @@
 ---
 layout: post
-title:  "Blog 7"
+title:  "Blog 7 - Linters"
 date:   2022-04-09 14:0:20 -0700
 categories: jekyll update
 ---
 
+# **What is a Linter?**
+#### A Linter is a tool that analysis code to identify errors, syntax erros, spelling, security checks, bugs and many more. Developers write in many different languages and can often make mistakes in the syntax that could be overlooked by code reviewer but Linters to a great job at finding errors as they are specific to each different programming languages.
+
+# **Why should you use a Linter?**
+* Linters prevent errors from reaching the production environment.
+* Makes code more readable and consistent as the linter as enforce a particular set of rules.
+* Makes your code more secure as some linters can identify performance and safety issues.
+
+# **How many types of Linters are there:**
+#### There are a lot of linters out there that focus on different aspects of code and different languages. Below are a few example of Linters and its uses cases:
+
+#### Linters for formatting:
+* StyleCap for C#
+* Prettier for JavaScript
+* Rubocop for Ruby
+* Gofmt for Go
+* Swiftlint for Switft
+
+#### Linters for Security:
+* Gosec for Go
+* LGTM for Javascript, Python, C#
+* Bandit for Python
+
+### Linters for Automation services:
+* Tflint for Terraform
+* hadolint for Docker
+* Kubelinter for Kubernetes
+
+# **Below is an example of a linter file:
+#### This is a linter called Tflint that is used for Terraform files.
+{% highlight ruby %}
+name: Lint
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  tflint:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout source code
+
+    - uses: actions/cache@v2
+      name: Cache plugin dir
+      with:
+        path: ~/.tflint.d/plugins
+        key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
+
+    - uses: terraform-linters/setup-tflint@v1
+      name: Setup TFLint
+      with:
+        tflint_version: v0.29.0
+
+    - name: Show version
+      run: tflint --version
+
+    - name: Init TFLint
+      run: tflint --init
+
+    - name: Run TFLint
+      run: tflint -f compact
+{% endhighlight %}
