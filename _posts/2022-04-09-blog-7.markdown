@@ -16,19 +16,19 @@ categories: jekyll update
 # **How many types of Linters are there:**
 #### There are a lot of linters out there that focus on different aspects of code and different languages. Below are a few example of Linters and its uses cases:
 
-#### Linters for formatting:
+### **Linters for formatting:**
 * StyleCap for C#
 * Prettier for JavaScript
 * Rubocop for Ruby
 * Gofmt for Go
 * Swiftlint for Switft
 
-#### Linters for Security:
+### **Linters for Security:**
 * Gosec for Go
 * LGTM for Javascript, Python, C#
 * Bandit for Python
 
-### Linters for Automation services:
+### **Linters for Automation services:**
 * Tflint for Terraform
 * hadolint for Docker
 * Kubelinter for Kubernetes
