@@ -33,8 +33,8 @@ categories: jekyll update
 * hadolint for Docker
 * Kubelinter for Kubernetes
 
-# **Below is an example of a linter file:
-#### This is a linter called Tflint that is used for Terraform files.
+# **Below is an example of a linter file:**
+#### This is a linter called Tflint that is used for Terraform files. This file sets up Tflint with GitHub Action where it will look at all the terraform files that you commit to github and it will check for any syntax errors and logical errors.
 {% highlight ruby %}
 name: Lint
 on:
