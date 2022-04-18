@@ -1,11 +1,58 @@
 ---
 layout: post
-title:  "Blog 5 - Ansible Playbook"
+title:  "Blog 5 - Intro to SQL"
 date:   2022-03-12 14:0:20 -0700
 categories: jekyll update
 ---
 
-# **What is a Ansible Playbook?**
-#### A playbook is a list of tasks that can be automatically executed. Each playbook consists a list of tasks and these tasks are executed one at a time and in order againsts all the machines matched by the host patern.
+# **What is SQL?**
+#### SQL is a Structured Query Language that is used for storing, manipulating, and retrieving data from a realtional database. It is the most widely known and used query languaged for realtional databases.
 
-# **W
+# **Which relational databases use SQL?**
+* MySQL
+* Oracle
+* MS Access
+* Sybase
+* Postgres
+* Microsoft SQL Server
+* SQLite
+
+# **What does SQL do in a database?**
+* Users can create databases and tables.
+* Users can retreive data from a relational database using queries.
+* Users can define the data in a database.
+* Users can manipulate the data in a database.
+* Users can view and store data in a database.
+* Users can set premission of the tables.
+
+# **How long has SQL been around for?**
+* 1970–E. F. Codd develops relational database concept
+* 1974-1979–System R with Sequel (later SQL) created at IBM Research Lab
+* 1979–Oracle markets first relational DB with SQL
+* 1981 – SQL/DS first available RDBMS system on DOS/VSE
+* Others followed: INGRES (1981), IDM (1982), DG/SGL (1984), Sybase (1986)
+* 1986–ANSI SQL standard released
+* 1989, 1992, 1999, 2003, 2006, 2008–Major ANSI standard updates
+* Current–SQL is supported by most major database vendors  
+
+# **Basic SQL commands/terms you should know:**
+* CREATE - used to create a new table in a database.
+* ALTER - used to alter existing data in a database.
+* DROP - used to delete a table in a database.
+* SELECT - used to select a table.
+* INSERT - used to create a record.
+* DELETE - used to delete a record.
+
+# **Example:**
+#### The code below will be used to retrieve the Customer Name and Customer State from a table in a databases:
+{% highlight ruby %}
+SELECT CustomerName, CustomerState
+FROM Customer_T
+GROUP BY CustomerState
+{% endhighlight %}
+
+#### This is the table from which we will be retrieving our infomration from:
+![Commands Image](https://topramanc.github.io/Images/Table.png)
+
+#### This image shows the execution and the result that we receive from our SQL query:
+![Commands Image](https://topramanc.github.io/Images/Table2.png)
