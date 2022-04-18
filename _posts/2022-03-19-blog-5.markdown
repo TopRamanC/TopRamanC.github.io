@@ -51,8 +51,8 @@ FROM Customer_T
 GROUP BY CustomerState
 {% endhighlight %}
 
-#### This is the table from which we will be retrieving our infomration from:
+#### **This is the table from which we will be retrieving our infomration from:**
 ![Commands Image](https://topramanc.github.io/Images/Table.png)
 
-#### This image shows the execution and the result that we receive from our SQL query:
+#### **This image shows the execution and the result that we receive from our SQL query:**
 ![Commands Image](https://topramanc.github.io/Images/Table2.png)
