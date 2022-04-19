@@ -47,15 +47,15 @@ categories: jekyll update
 
 # **Step 5: Create relationships between tables.**
 
-#### **Relationsips:**
-## A relationship is a link between two entities / tables that defines how the data is structured.
+#### **Relationships:**
+#### A relationship is a link between two entities / tables that defines how the data is structured.
 
-## **Examples:**
+#### **Examples:**
 * A customer has MANY sales
 * A sale has ONE customer
 * A company has MANY employees
 
-#### Below are the symbols that we must use to identiy relationships between our tables or entities:
+#### **Below are the symbols that we must use to identiy relationships between our tables or entities:**
 
 ![Commands Image](https://topramanc.github.io/Images/relationship.jpg)
 
