@@ -40,7 +40,7 @@ categories: jekyll update
 
 #### Below are the symbols that we must use to identiy relationships between our tables or entities.
 
-![Commands Image](https://topramanc.github.io/Images/relationship.png)
+![Commands Image](https://topramanc.github.io/Images/relationship.jpg)
 
 
 ### Below is an ERD diagram that I am creating for my database design course and this picture shows all the Entities with their attributes and the relationships among them.
