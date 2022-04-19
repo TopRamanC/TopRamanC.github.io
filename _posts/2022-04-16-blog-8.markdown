@@ -5,3 +5,44 @@ date:   2022-04-16 14:0:20 -0700
 categories: jekyll update
 ---
 
+# **What are the steps of creating a database?**
+#### In this blog we will go over the first 3 steps required to create a database.
+
+# Step 1: Brainstorm the questions below and write down your business needs
+* What are the business needs?
+* What are the requirments?
+* Defining the entities.
+* What is the purpose of creating this database?
+* What type of data are you storing?
+* What are the safety concerns of this data?
+
+
+# Step 2: You need to define entities:
+### Entitiy - person, place, object, event, concept (often corresponds to a row in a table)
+
+#### To figure out youe entities you must know what you need to store data about. For example, if you have a business that sells computers then Computers, Cusomters, Sales will be an entity for your business.
+
+#### Example:
+#### I am desiging a database for my school project for a business that sells computer parts and in my case the entities would be Employee, Asset, Branch, Territory, Vendor, Purchase Order and Account Manager
+
+# Step 3: Define the Attributes and Entity relationships.
+#### Do define your attributes for your entities you must think decide what you want to store abuot each of the entities chosen. For Example, for the Customer entity we must store the following attributes: first name, last name, and address.
+
+#### Once you have your attributes ready then its time to develop their relationships and their business rules.
+
+#### Relationsips:
+## A relationship is a link between two entities / tables that defines how the data is structured.
+
+## Examples:
+* A customer has MANY sales
+* A sale has ONE customer
+* A company has MANY employees
+
+#### Below are the symbols that we must use to identiy relationships between our tables or entities.
+
+![Commands Image](https://topramanc.github.io/Images/relationship.png)
+
+
+### Below is an ERD diagram that I am creating for my database design course and this picture shows all the Entities with their attributes and the relationships among them.
+
+![Commands Image](https://topramanc.github.io/Images/Entity.png)

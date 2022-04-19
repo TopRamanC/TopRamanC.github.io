@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Blog 6"
+title:  "Blog 6 - SQL Queries"
 date:   2022-04-02 13:0:20 -0700
 categories: jekyll update
 ---
