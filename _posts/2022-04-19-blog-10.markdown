@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Blog 9 - SQL Sub Query"
+title:  "Blog 10 - SQL Sub Query"
 date:   2022-04-19 14:0:20 -0700
 categories: jekyll update
 ---
