@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "Blog 9 - Creating a database (Part 2)"
+date:   2022-04-19 14:0:20 -0700
+categories: jekyll update
+---
+
+# **This blog will talk about the steps required after you have already created an ERD diagram explained in the previous blog. Through out this blog I will put examples from my current database project I am working on.**
+
+# **Step 1: Transfer your ERD Diagram in a relational schema.**
+
+#### **What is a relational schema?**
+#### A relationa schema shows the set of relational tables and the associated items that are related to each other.
+
+#### In a relational schema, you must link each foreign keys with their primary keys by using arrows. Below is an example of a relational schema for my database project:
+
+![Commands Image](https://topramanc.github.io/Images/relationalschema.png)
+
+# **Step 2: Figure out functional dependencies in your diagram**
+
+#### **WHat is a functional dependency?**
+#### __Functional__ __Dependency__ is the value of one attribute (thedeterminant) that determines the value of another attribute.
+
+#### **There are 3 types of functional dependencies:**
+* Full dependency - the attribute is fully dependant on another attribute.
+* Partial dependency - the attribute is partially dependant on another attribute.
+* Transitive dependency - the attribute is indirectly dependant on another attribute.
+
+#### Below is an example of all the functional depencies shown in my project:  
+![Commands Image](https://topramanc.github.io/Images/dependency.png)
+
+# **Step 3: Normalize every table in the 3rd normal form.**
+
+#### **What is Normmalization?**
+#### Normalization is the process of structuring a database where we must transform our database in the 3rd normal form.
+
+#### **There are 3 types of normal form:**
+##### **First Normal Form**
+* No multivalued attributes
+* Every attribute value is atomic
+* All relations must be in the 1st Normal Form
+
+##### **Second Normal Form**
+* Every non-key attribute is fully functionally dependent on the Entire primary key
+* No partial dependencies
+
+##### **Thrid Normal Form**
+* No transitive dependencies
+
+#### **The following picture shows the steps of going through the normalization process:**
+![Commands Image](https://topramanc.github.io/Images/steps.png)
+
+
+#### **What are the type of anomalies we are looking to avoid?**
+* __Insertion__ - insertion of data that could cause duplication of data. For example, if new product is ordered for order 201 of existing customer, customer data must be re-entered, existing customer, customer data must be re-entered, causing duplicationcausing duplication
+* __Deletion__ - deletion of data that causes other important data to be lost. For example, if you delete Computers from an order# 446 then we would lose information concerning the price or description of that computer.
+* __Update__ - update of data that requires to be changed in multiple records.
+
+#### **Below is a picture of my database project after it has gone through the normalization process and you can see that everything is in the 3rd normal form:**
+![Commands Image](https://topramanc.github.io/Images/normalization.png)
