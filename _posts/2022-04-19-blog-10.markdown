@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Blog 9 - SQL Sub Query"
+date:   2022-04-19 14:0:20 -0700
+categories: jekyll update
+---
+
+# **What is a SQL Sub Query?**
+#### A SQL Sub Query is a query within another SQL query also known as nested queries.
+
+# **There are two types of sub queries:**
+* Non-correlated - executed once for the entire outer query.
+* Correlated - executed once for each row returned by the outer query.
+
+# **Non-correlated subqueries:**
+* Do not depend on data from the outer query
+* Execute once for the entire outer query
+* The subquery first runs by itself then passes the results to the outer query
+
+# **Correlated subqueries:**
+* Make use of data from the outer query
+* Execute once for each row of the outer query
+* Can use the EXISTS operator
+
+# **What is the EXISTS operator?**
+#### EXISTS operator returns a value of true (when the info exists) or false (when info does not exist) and it can only be used in a correlated subquery.
+
+# **Non-Correlated Subquery Example:**
+#### You can tell this is an non correlated subquery because the sub query does not depend on any value from the outer query and the sub query can run on its own.
+{% highlight ruby %}
+SELECT CustomerName, CustomerAddress
+FROM Customer_T
+    WHERE Customer_T.CustomerID =
+        (SELECT Customer_ID FROM Order_T
+            WHERE ORDER_ID = 1003);
+{% endhighlight %}
+
+
+# **Correlated Subquery Example:**
+##### You can tell this is a correlated query because it uses the EXISTS operator and the subquery is testing for a value that comes from the outer query.
+{% highlight ruby %}
+SELECT DISTINCT OrderID FROM Orderline_T
+WHERE EXISTS
+    (SELECT *
+        FROM Product_T
+            WHWERE ProductID = OrderLine_T.ProductID
+                AND Productfinish = 'Natural Ash');
+{% endhighlight %}
+
+#### Below is an example of a correlated sub query I created and ran on a database in SQL:
+![Commands Image](https://topramanc.github.io/Images/sql.png)
