@@ -5,20 +5,22 @@ date:   2022-04-19 14:0:20 -0700
 categories: jekyll update
 ---
 
-# **This blog will talk about the steps required after you have already created an ERD diagram explained in the previous blog. Through out this blog I will put examples from my current database project I am working on.**
+# This blog will talk about the steps required after you have already created an ERD diagram explained in the previous blog. Through out this blog I will put examples from my current database project I am working on.
 
 # **Step 1: Transfer your ERD Diagram in a relational schema.**
 
 #### **What is a relational schema?**
-#### A relationa schema shows the set of relational tables and the associated items that are related to each other.
+#### **A relationa schema** shows the set of relational tables and the associated items that are related to each other.
 
-#### In a relational schema, you must link each foreign keys with their primary keys by using arrows. Below is an example of a relational schema for my database project:
+#### In a **relational schema**, you must link each foreign keys with their primary keys by using arrows. 
+
+#### **Below is an example of a relational schema for my database project:**
 
 ![Commands Image](https://topramanc.github.io/Images/relationalschema.png)
 
 # **Step 2: Figure out functional dependencies in your diagram**
 
-#### **WHat is a functional dependency?**
+#### **What is a functional dependency?**
 #### __Functional__ __Dependency__ is the value of one attribute (thedeterminant) that determines the value of another attribute.
 
 #### **There are 3 types of functional dependencies:**
@@ -26,7 +28,7 @@ categories: jekyll update
 * Partial dependency - the attribute is partially dependant on another attribute.
 * Transitive dependency - the attribute is indirectly dependant on another attribute.
 
-#### Below is an example of all the functional depencies shown in my project:  
+#### **Below is an example of all the functional depencies shown in my project:**  
 ![Commands Image](https://topramanc.github.io/Images/dependency.png)
 
 # **Step 3: Normalize every table in the 3rd normal form.**
