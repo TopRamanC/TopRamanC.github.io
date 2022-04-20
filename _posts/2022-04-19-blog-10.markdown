@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Blog 10 - SQL Sub Query"
+title:  "Blog 10 - SQL Subquery"
 date:   2022-04-19 16:0:20 -0700
 categories: jekyll update
 ---
 
-# **What is a SQL Sub Query?**
+# **What is a SQL Subquery?**
 #### A SQL Sub Query is a query within another SQL query also known as nested queries.
 
-# **There are two types of sub queries:**
+# **There are two types of subqueries:**
 * Non-correlated - executed once for the entire outer query.
 * Correlated - executed once for each row returned by the outer query.
 
@@ -47,5 +47,5 @@ WHERE EXISTS
                 AND Productfinish = 'Natural Ash');
 {% endhighlight %}
 
-#### Below is an example of a correlated sub query I created and ran on a database in SQL:
+#### **Below is an example of a correlated sub query I created and ran on a database in SQL:**
 ![Commands Image](https://topramanc.github.io/Images/sql.png)
