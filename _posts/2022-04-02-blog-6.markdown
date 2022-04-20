@@ -5,3 +5,64 @@ date:   2022-04-02 13:0:20 -0700
 categories: jekyll update
 ---
 
+# **What is a SQL Query?**
+#### A SQL Query is a process of retrieving data from a database.
+
+# **You should know the following SQL commands:**
+#### Data Definition - these commands help you define the database structure.
+* CREATE
+* DROP
+* ALTER
+* TRUNCATE
+
+#### Example: this code will create a table name "Employee_table" with 3 columns for Employee_ID, FirstName, and LastName.
+{% highlight ruby %}
+CREATE TABLE Employee_table (
+    Employee_ID int,
+    FirstName varchar(255),
+    LastName varchar(255),
+);
+{% endhighlight %}
+
+#### Data Manipulation - these commands allow you to manipulate data by inserting, deleting or updating data.
+* INSERT
+* UPDATE
+* DELETE
+
+#### Example: this code will insert "Raman Chadha" to the employees table in the database.
+{% highlight ruby %}
+INSERT INTO Employee_table (FirstName, LastName)
+VALUES ('Raman', 'Chadha')
+{% endhighlight %}
+
+#### Data Control - these commands are used to give permissions.
+* GRANT
+* REVOKE
+
+#### Example: this code will grant the permission for SELECT to all users for the Employee_table
+{% highlight ruby %}
+GRANT SELECT ON Employee_table TO public;
+{% endhighlight %}
+
+#### Transaction Control - these commands are used to deal with a transaction.
+* COMMIT
+* ROLLBACK
+* SAVE POINT
+
+#### Example: this code will delete the employee with the employee ID 1729 and then the COMMIT will save all the transactions to the database.
+{% highlight ruby %}
+DELETE FROM Employee
+WHERE EmployeeID = 1729
+COMMIT;
+{% endhighlight %}
+
+#### Data Query - these commands are used to retreive data from a database.
+* SELECT
+* FROM
+
+#### Example: this query will display the first name of all the employee who are above 35 years old in the employee table.
+{% highlight ruby %}
+SELECT FirstName
+FROM Employee_Table
+WHERE Age > 35;
+{% endhighlight %}
